@@ -1,4 +1,3 @@
-// import '../../styles/main.css'
 import { useState } from "react";
 import StoreModal from "./StoreModal";
 
@@ -29,6 +28,5 @@ export default function PaymentDiv(props){
             <>{selected ?<p>{selected.date} at <a href='#' onClick={()=>setModal(true)} > {selected.name}</a></p>: <p><a href='#' onClick={()=>setModal(true)}>Find a store</a></p>} </>
             <p className="subtle">Available for click and collect at checkout</p>
         </div>
-    
     </>)
 }

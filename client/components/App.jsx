@@ -6,13 +6,9 @@ import Explorer from "./Explorer/Explorer.jsx";
 import Body1Carousel from "./Carousels/Body1Carousel.jsx";
 import Body2Carousel from "./Carousels/Body2Carousel.jsx";
 import Body3Carousel from "./Carousels/Body3Carousel.jsx";
-
-
-
 import Footer from "./Footer/Footer.jsx";
 
 const App = () => {
-  
   const [shoe, setShoe] = useState({});
   const [allShoes, setAllShoes] = useState([])
   const [currentShoe, setCurrentShoe] = useState(1)
@@ -32,14 +28,9 @@ const App = () => {
         setShoe(shoes)
       });
   }, [currentShoe]);
-  ////////////////////////////////////////////////////////////////////////
-
-
   function selectShoe(response){
     setCurrentShoe(response)
   }
-
-
   return (
     <>
       <Header />

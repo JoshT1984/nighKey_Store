@@ -14,7 +14,6 @@
   cursor: pointer;
   margin-top: 2rem;
 }
-
 #help_sublinks h1 {
   color: white;
   position: relative;
@@ -26,7 +25,6 @@
   font-size: 13px;
   letter-spacing: -1.15px;
 }
-
 #help_sublinks p {
   text-align: left;
   margin-left: 7.2rem;
@@ -35,7 +33,6 @@
   margin-top: -1.3rem;
   width:7.5rem;
 }
-
 #help_sublinks p:hover {
   color: white;
   background-color: transparent;

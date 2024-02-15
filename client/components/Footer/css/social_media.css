@@ -6,25 +6,21 @@
   margin-left:3rem;
   margin-top: 2rem;
 }
-
 #social_media:hover {
   color: white;
 }
-
 #social_media img {
   width: 25px;
   height: 25px;
   margin-right: 1.4rem;
   scale:1.2;
 }
-
 .youtube,
 .facebook,
 .instagram,
 .twitter {
   background-color: #7e7e7e;
 }
-
 .youtube:hover,
 .facebook:hover,
 .instagram:hover,

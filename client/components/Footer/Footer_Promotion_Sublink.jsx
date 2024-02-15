@@ -13,5 +13,4 @@ const Footer_Promotion_Sublink = () => {
     </div>
   );
 };
-
 export default Footer_Promotion_Sublink;

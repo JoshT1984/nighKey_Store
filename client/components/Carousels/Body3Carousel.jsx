@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Body3Carousel.css';
 
-
 const Body3Carousel = () => {
     const settings = {
         dots: false,
@@ -13,7 +12,6 @@ const Body3Carousel = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: false,
-        // autoplaySpeed: 2000
     };
 
     function clickRight() {
@@ -42,12 +40,10 @@ const Body3Carousel = () => {
             <button className="left" onClick={clickLeft}>
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img"  height="28px" fill="none"><path stroke="currentColor" strokeWidth="1.5" d="M15.525 18.966L8.558 12l6.967-6.967"></path></svg>
             </button>
-	
        
         <div id="Body3Carousel" className='horizontal-scroll'>
             
             <div className='carouselContainer'>
-            {/* <Slider {...settings}>  */}
             
                 <div className="Body3IMGs">
                     <img src="https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/a3e7dead-1ad2-4c40-996d-93ebc9df0fca/dunk-low-retro-mens-shoes-87q0hf.png" />
@@ -105,11 +101,8 @@ const Body3Carousel = () => {
                     <h3 className="smallerText">Men's Shoes</h3>
                     <h2 className="shoeName">$125.00</h2>
                 </div>
-            {/* </Slider> */}
                 </div>
-            
         </div></>
     );
 }
-
 export default Body3Carousel;

@@ -15,5 +15,4 @@ const Footer_Social_Media = () => {
     </>
   );
 };
-
 export default Footer_Social_Media;

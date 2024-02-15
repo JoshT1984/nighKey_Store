@@ -13,7 +13,6 @@ const Size_Ship_Rev = ({ shoe }) => {
     !shoe.secondary_review_comment ||
     !shoe.star_rating
   ) {
-    // Handle case where shoe object or its properties are not provided
     return <div>No review data available</div>;
   }
   const [state, setState] = useState({
@@ -26,7 +25,6 @@ const Size_Ship_Rev = ({ shoe }) => {
     isShipParagraphVisible: false,
     isReviewParagraphVisible: false,
   });
-
   const {
     currentSizeArrow,
     currentShipArrow,

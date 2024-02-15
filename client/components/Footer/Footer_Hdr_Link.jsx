@@ -13,5 +13,4 @@ const Footer_Hdr_Link = () => {
     </>
   );
 };
-
 export default Footer_Hdr_Link;

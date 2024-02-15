@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./css/tos_privacy.css";
 import supply_icon from "./images/supply_icon.png";
-
 const Footer_Tos_Privacy = () => {
   const [showGuide, setShowGuide] = useState(false);
-
   const openGuide = () => {
     setShowGuide(true);
   };
-
   const closeGuide = () => {
     setShowGuide(false);
   };
-
   return (
     <>
       <div className="tos_privacy">
@@ -54,5 +50,4 @@ const Footer_Tos_Privacy = () => {
     </>
   );
 };
-
 export default Footer_Tos_Privacy;

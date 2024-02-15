@@ -1,5 +1,3 @@
-//Modal for the first body Carousel when images are clicked(after the banner carousel)
-
 import React from 'react';
 import './ModalBody1.css';
 

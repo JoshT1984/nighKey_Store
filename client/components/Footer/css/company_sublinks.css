@@ -15,7 +15,6 @@
   cursor:pointer;
   margin-top: 2rem;
 }
-
 #company_sublinks h1 {
   color: white;
   background-color: transparent;
@@ -26,7 +25,6 @@
   font-size: 13px;
   letter-spacing: -1.15px;
 }
-
 #company_sublinks p {
   text-align: left;
   margin-left: 4.2rem;
@@ -35,7 +33,6 @@
   margin-top:-1.3rem;
   width:4.5rem;
 }
-
 #company_sublinks p:hover {
   color: white;
   background-color: transparent;

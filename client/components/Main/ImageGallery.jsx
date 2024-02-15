@@ -2,12 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import fadeTop from "./resources/fadeTop.png"
 import fadeBottom from "./resources/fadeBottom.png"
 
-
-
 const ImageGallery = ({shoe, allShoes, currentShoe}) => {   
-    // current selected image in array
     const [selected, setSelected] = useState(0);
-    // stores the expanded image HTML
     const [currentExpanded, setCurrentExpanded] = useState(<><img id="selectedImg" src="https://static.nike.com/a/images/t_default/4f37fca8-6bce-43e7-ad07-f57ae3c13142/air-force-1-07-mens-shoes-jBrhbr.png"></img></>)
     
     useEffect(() => {
@@ -15,8 +11,6 @@ const ImageGallery = ({shoe, allShoes, currentShoe}) => {
             setCurrentExpanded(<><img id="selectedImg" src={allShoes[currentShoe - 1].expandedimg[0]}></img></>)
         }
     }, [currentShoe])
-    
-    // Renders the scroll of thumbnails with hover features
     let renderScroll = () => {
         return shoe.thumbnails.map((image, index) => (
             <img
@@ -30,8 +24,6 @@ const ImageGallery = ({shoe, allShoes, currentShoe}) => {
             ></img>
         ));  
     };
-   
-    // Renders expanded image, conditional so to render if it is the video as well
     let renderExpanded = (event) => {
         if (event.target.id == 1) {
             setCurrentExpanded(<><video id="selectedImg" loop autoPlay preload="auto">
@@ -50,7 +42,6 @@ const ImageGallery = ({shoe, allShoes, currentShoe}) => {
             setCurrentExpanded(<><img id="selectedVid" src={shoe.expandedimg[current]}></img></>)
         }
     }
-
     let clickBack = (event) => {
         if (selected === 0) {
             setSelected(10);
@@ -101,5 +92,4 @@ const ImageGallery = ({shoe, allShoes, currentShoe}) => {
         )
     }
 }
-
 export default ImageGallery;

@@ -17,24 +17,20 @@
   margin-top: 1.8rem;
   right:18.1rem;
 }
-
 .location_supply {
   display: flex;
   justify-content: end;
   margin-right: 10px;
 }
-
 .location_supply p {
   margin-right: 12.5rem;
   font-size: 12px;
   margin-top: 2rem;
 }
-
 .location_supply p:hover {
   color: white;
   background-color: transparent;
 }
-
 .copyright {
   text-align: start;
   width: 72.5rem;
@@ -44,12 +40,10 @@
   position: relative;
   left:-1.5rem;
 }
-
 .copyright span {
   color: #5f5f5f;
   margin-left: 20px;
 }
-
 .copyright img {
   width: 13px;
   height: 10px;

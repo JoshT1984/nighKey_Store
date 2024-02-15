@@ -13,7 +13,6 @@
   margin-top: 2rem;
   width: 20rem;
 }
-
 #promotion_sublinks h1 {
   color: white;
   background-color: transparent;
@@ -23,7 +22,6 @@
   letter-spacing: -1.15px;
   right: 1rem;
 }
-
 #promotion_sublinks p {
   text-align: left;
   margin-left: 3rem;
@@ -35,7 +33,6 @@
   text-wrap: nowrap;
   width: 3rem;
 }
-
 #promotion_sublinks p:hover {
   color: white;
   background-color: transparent;

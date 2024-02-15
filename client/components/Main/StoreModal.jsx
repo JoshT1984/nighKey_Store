@@ -3,27 +3,20 @@ import { useState } from "react";
 
 export default function StoreModal(props){
     const [selected, setSelected] = useState({})
-
     function saveStore(){
-        // console.log(Object.keys(selected).length)
         if (Object.keys(selected).length !== 0){
              props.select({...selected, date: month + " " +day })
         } else{
             props.select(false)
-
         }
-        
         props.close(false)
     }
-    // console.log(selected)
-
     const date = new Date();
     let day = date.getDate()
     const months= {0: "Jan", 1 : "Feb", 2: "Mar", 3: "Apr", 4: "May", 5: "June", 6: "July", 7: "Aug", 8: "Sep", 9: "Oct", 10: "Nov", 11:"Dec"}
     let month = date.getMonth()
     day+=5;
     month = months[month]
-    
 const stores = [{id:1, name:"Nike Unite - Harlem"}, {id:2, name:"Nike Factory Store - Paramus"}, {id:3, name:"Nike Soho"}, {id:4, name:"Nike Well Collective - Battery Park"}, {id:5, name:"Nike Well Collective - Williamsburg"}, {id:6, name:"Nike Unite - East New York"}, {id:7, name:"Nike Well Collective - Shrewsbury"}, {id:8, name:"Nike Factory Store - Staten Island"},  {id:9, name:"Nike Unite - North Bronx"}, {id:10, name:"Nike Factory Store - Newark"}]
 
     return (
@@ -38,8 +31,7 @@ const stores = [{id:1, name:"Nike Unite - Harlem"}, {id:2, name:"Nike Factory St
                 </div>
                 <div className="locations">
                     <h5>Nearby Stores</h5>
-                    {stores.map(store => (
-                        
+                    {stores.map(store => ( 
                       <div key={store.id} >
                        {props.stores.includes(store.name) ? (<>
                         {selected && selected.id === store.id ? <button style={{border : "1px solid black"}} id={store.id}> 

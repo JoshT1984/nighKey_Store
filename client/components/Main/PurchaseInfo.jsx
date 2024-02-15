@@ -18,5 +18,4 @@ const PurchaseInfo = (props) => {
     </div>
   );
 };
-
 export default PurchaseInfo;

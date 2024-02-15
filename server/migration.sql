@@ -1,5 +1,4 @@
 DROP TABLE IF EXISTS shoeData;
-
 CREATE TABLE shoeData (
     id SERIAL,
     name varchar(30),
@@ -9,38 +8,22 @@ CREATE TABLE shoeData (
     description text,
     price integer,
     purchased integer,
-    /* For Image Gallery */
     thumbnails text[],
     expandedImg text[],
-    /* For shoe sizes */
     shoeSize JSONB[],
-    /* For "How Others Are Wearing It" Carousel */
     howOthersCarousel JSONB[],
-    -- Complete The Look & Modal
     completeTheLook JSONB[],
-    /* For "Exploration" Images */
     ExplorationImg text[],
-    -- For comparing the stores that are available
     stores text[],
-    -- Benefits for product modal and exploration,
     benefits text[],
-    --  Details for product modal
     details text[],
-    -- origing on shoe
     origin text,
-    --primary review comments
     primary_review_comment text[],
-    --star rating
     star_rating real[],
-   --customer username
     customer_username text[],
-    --review date
     review_date text[],
-    --secondary review comments
     secondary_review_comment text[]
 );
-
-/* White on White */
 INSERT INTO shoeData(
     name,
     type,
@@ -65,7 +48,6 @@ INSERT INTO shoeData(
     review_date,
     secondary_review_comment
 ) VALUES(
-    /* Details */
     'Nike Air Force 1 ''07',
     'Men''s Shoes',
     'White/White',
@@ -73,7 +55,6 @@ INSERT INTO shoeData(
     'The radiance lives on in the Nike Air Force 1 ’07, the b-ball OG that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.',
     115,
     3220,
-    /* Image Gallery //////////////////////////////////////////////////////////////////// */ 
     ARRAY[
         'https://static.nike.com/a/images/t_default/4f37fca8-6bce-43e7-ad07-f57ae3c13142/air-force-1-07-mens-shoes-jBrhbr.png',
         'https://static.nike.com/a/videos/so_1.82/cd7718c0-9577-4006-81ce-bda237edf6ce/air-force-1-07-mens-shoes-jBrhbr.jpg',
@@ -100,7 +81,6 @@ INSERT INTO shoeData(
         'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1c1e5f55-99c2-4522-b398-2352e01ba566/air-force-1-07-mens-shoes-jBrhbr.png',
         'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0a0e1b96-043c-46d4-96a0-22408b6c771d/air-force-1-07-mens-shoes-jBrhbr.png'
     ],
-    /* Sizing /////////////////////////////////////////////////////////////////////////////// */
 ARRAY[
     '{"size": "M 5 / W 6.5", "inStock": false}'::JSONB,
     '{"size": "M 5.5 / W 7", "inStock": false}'::JSONB,
@@ -125,7 +105,6 @@ ARRAY[
     '{"size": "M 17 / W 18.5", "inStock": true}'::JSONB,
     '{"size": "M 18 / W 19.5", "inStock": true}'::JSONB
 ],
-    /* Carousels //////////////////////////////////////////////////////////////////////////// */
     ARRAY[
         '{
             "image": "https://static.pxlecdn.com/photos/559121339/original/4f0eec324b8270cb583d.jpg",
@@ -232,7 +211,6 @@ ARRAY[
             ]
         }'::JSONB
     ],
-    -- Complete The Look
     ARRAY[
         '{
         "image": "https://i.postimg.cc/zf4h7JZ2/set1.png",
@@ -565,39 +543,32 @@ ARRAY[
             ]
             }'::JSONB
         ],
-    /* Explorer Images ////////////////////////////////////////////////////////////////// */
     ARRAY[
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/243a7c32-0aa7-4c0c-a238-c2b91b91d67e/pdp-replace.jpg',
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/b2f8e5b8-ffe4-45e1-8b70-ed502fcf6243/pdp-replace.jpg',
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/d5ff67b4-6bb1-47ec-ae67-3484c21ac5de/pdp-replace.jpg'
     ],
-    -- Stores where shoes are available
     ARRAY[
         'Nike Factory Store - Paramus',
         'Nike Factory Store - Staten Island'
     ],
-    -- Benefits for products in the modal and explore section
     ARRAY[
         'The stitched overlays on the upper add heritage style, durability and support.',
         'Originally designed for performance hoops, the Nike Air cushioning adds lightweight, all-day comfort.',
         'The low-cut silhouette adds a clean, streamlined look.',
         'The padded collar feels soft and comfortable.'
     ],
-    -- Details for product modal
     ARRAY[
         'Foam midsole',
         'Perforations on the toe',
         'Rubber sole'
     ],
-    -- Origin for shoe
     'Debuting in 1982, the AF1 was the first basketball shoe to house Nike Air, revolutionizing the game while rapidly gaining traction around the world. Today, the Air Force 1 stays true to its roots with the same soft and springy cushioning that changed sneaker history.',
-    --primary_review_comment
     ARRAY[
         'Awesome shoes!',
         'Shoes',
         'Classic like always'
     ],
-    --star_rating
     ARRAY[
         1.0,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,
         2.0,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,
@@ -605,20 +576,10 @@ ARRAY[
         4.0,4.1,4.2,4.3,4.4,4.5,4.6,4.7,4.8,4.9,
         5.0
     ],
-    --customer username
     ARRAY['loretor519667877', 'Leairah52cb098261ca4e868c08b70a05c0fbd4', 'Michael677065232'],
-    --review date
     ARRAY['Jan 28, 2024', 'Jan 23, 2024', 'Jan 23, 2024'],
-    --secondary review comment
     ARRAY['Perfectly awesome pair of shoes', 'I like them I also want more jordan 4''s on this app and university blue.', 'Nice and clean, Classic like always']
 );
-
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* Black on Black */
-
 INSERT INTO shoeData(
     name,
     type,
@@ -643,7 +604,6 @@ INSERT INTO shoeData(
     review_date,
     secondary_review_comment
 ) VALUES(
-    /* Details */
     'Nike Air Force 1 ''07',
     'Men''s Shoes',
     'Black/Black',
@@ -651,7 +611,6 @@ INSERT INTO shoeData(
     'The radiance lives on in the Nike Air Force 1 ’07, the b-ball OG that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.',
     115,
     878,
-    /* Image Gallery //////////////////////////////////////////////////////////////////// */ 
     ARRAY[
         'https://static.nike.com/a/images/t_default/21d38052-598b-44f6-a857-123c9f72b015/air-force-1-07-mens-shoes-jBrhbr.png',
         'https://static.nike.com/a/videos/so_2.25/d58e9afa-e042-497c-917d-d625c432b72b/air-force-1-07-mens-shoes-jBrhbr.jpg',
@@ -678,7 +637,6 @@ INSERT INTO shoeData(
         'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f430f78b-6107-4c30-a4b2-f6df4fd228be/air-force-1-07-mens-shoes-jBrhbr.png',
         'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/89a2cdd6-992b-4224-aab3-e49681f01e00/air-force-1-07-mens-shoes-jBrhbr.png'
     ],
-    /* Sizing /////////////////////////////////////////////////////////////////////////////// */
     ARRAY[
         '{"size": "M 4 / W 5.5", "inStock": false}'::JSONB,
         '{"size": "M 4.5 / W 6", "inStock": false}'::JSONB,
@@ -705,7 +663,6 @@ INSERT INTO shoeData(
         '{"size": "M 17 / W 18.5", "inStock": true}'::JSONB,
         '{"size": "M 18 / W 19.5", "inStock": true}'::JSONB
     ],
-    /* Carousels //////////////////////////////////////////////////////////////////////////// */
     ARRAY[
         '{
             "image": "https://static.pxlecdn.com/photos/559121339/original/4f0eec324b8270cb583d.jpg",
@@ -812,7 +769,6 @@ INSERT INTO shoeData(
             ]
         }'::JSONB
     ],
-    -- Complete The Look
     ARRAY[
         '{
         "image": "https://i.postimg.cc/HnYt4r2Q/set1.png",
@@ -1145,40 +1101,33 @@ INSERT INTO shoeData(
         ]
         }'::JSONB
     ],
-    /* Explorer Images ////////////////////////////////////////////////////////////////// */
     ARRAY[
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/bf03cb63-a736-4557-95bd-49e9d8714a05/pdp-cw2288-001.jpg',
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/b16130df-9129-4334-824e-95bc7758ae34/pdp-cw2288-001.jpg',
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/ce585162-01c8-47b7-a574-fb180854e324/pdp-cw2288-001.jpg'
     ],
-    -- Stores where shoes are available
     ARRAY[
         'Nike Unite - Harlem',
         'Nike Well Collective - Williamsburg',
         'Nike Factory Store - Staten Island'
     ],
-    -- Benefits for products in the modal and explore section
     ARRAY[
         'The stitched overlays on the upper add heritage style, durability and support.',
         'Originally designed for performance hoops, the Nike Air cushioning adds lightweight, all-day comfort.',
         'The low-cut silhouette adds a clean, streamlined look.',
         'The padded collar feels soft and comfortable.'
     ],
-    -- Details for product modal
     ARRAY[
         'Foam midsole',
         'Perforations on the toe',
         'Rubber sole'
     ],
-    -- Origin for shoe
     'Debuting in 1982, the AF1 was the first basketball shoe to house Nike Air, revolutionizing the game while rapidly gaining traction around the world. Today, the Air Force 1 stays true to its roots with the same soft and springy cushioning that changed sneaker history.',
-    --primary_review_comment
     ARRAY[
         'Awesome shoes!',
         'Shoes',
         'Classic like always'
     ],
-    --star_rating
     ARRAY[
         1.0,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,
         2.0,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,
@@ -1186,20 +1135,10 @@ INSERT INTO shoeData(
         4.0,4.1,4.2,4.3,4.4,4.5,4.6,4.7,4.8,4.9,
         5.0
     ],
-    --customer username
     ARRAY['loretor519667877', 'Leairah52cb098261ca4e868c08b70a05c0fbd4', 'Michael677065232'],
-    --review date
     ARRAY['Jan 28, 2024', 'Jan 23, 2024', 'Jan 23, 2024'],
-    --secondary review comment
     ARRAY['Perfectly awesome pair of shoes', 'I like them I also want more jordan 4''s on this app and university blue.', 'Nice and clean, Classic like always']
 );
-
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* Black on White */
-
 INSERT INTO shoeData(
     name,
     type,
@@ -1224,7 +1163,6 @@ INSERT INTO shoeData(
     review_date,
     secondary_review_comment
 ) VALUES(
-    /* Details */
     'Nike Air Force 1 ''07',
     'Men''s Shoes',
     'Black/White',
@@ -1232,7 +1170,6 @@ INSERT INTO shoeData(
     'The radiance lives on in the Nike Air Force 1 ’07, the b-ball icon that puts a fresh spin on what you know best: crisp leather, bold colors and the perfect amount of flash to make you shine.',
     115,
     139,
-    /* Image Gallery //////////////////////////////////////////////////////////////////// */ 
     ARRAY[
         'https://static.nike.com/a/images/t_default/057c2bbd-d065-44eb-913f-51dd4f98d680/air-force-1-07-mens-shoes-jBrhbr.png',
         'https://static.nike.com/a/videos/so_4.92/a91adb2a-77f4-4e15-811b-4847a3768ac0/air-force-1-07-mens-shoes-jBrhbr.jpg',
@@ -1259,7 +1196,6 @@ INSERT INTO shoeData(
         'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8c9662a3-cb63-4af1-b15f-363b865400dc/air-force-1-07-mens-shoes-jBrhbr.png',
         'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ea266a57-5f91-4b2c-9b19-bef27655015a/air-force-1-07-mens-shoes-jBrhbr.png'
     ],
-    /* Sizing /////////////////////////////////////////////////////////////////////////////// */
     ARRAY[
         '{"size": "M 6 / W 7.5", "inStock": true}'::JSONB,
         '{"size": "M 6.5 / W 8", "inStock": true}'::JSONB,
@@ -1282,7 +1218,6 @@ INSERT INTO shoeData(
         '{"size": "M 17 / W 18.5", "inStock": true}'::JSONB,
         '{"size": "M 18 / W 19.5", "inStock": true}'::JSONB
     ],
-    /* Carousels //////////////////////////////////////////////////////////////////////////// */
     ARRAY[
         '{
             "image": "https://static.pxlecdn.com/photos/584393865/original/7fed2411cf2668ec98b4.jpg",
@@ -1742,40 +1677,33 @@ INSERT INTO shoeData(
         ]
         }'::JSONB
     ],
-    /* Explorer Images ////////////////////////////////////////////////////////////////////// */
     ARRAY[
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/edac202b-5742-47db-82a7-601b950abcfb/image.jpg',
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/e1b5af2b-2bf2-44ff-b696-11b49e4547e0/image.jpg',
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/db7fba46-21e9-4167-a4e1-37d828a03a47/image.jpg'
     ],
-    -- Stores where shoes are available
     ARRAY[
         'Nike Factory Store - Paramus',
         'Nike Soho',
         'Nike Factory Store - Staten Island',
         'Nike Unite - North Bronx'
     ],
-    -- Benefits for products in the modal and explore section
     ARRAY[
         'Smoother than backboard glass and featuring a slight sheen, the stitched leather overlays add heritage style, durability and support.',
         'Originally designed for performance hoops, the Nike Air cushioning adds lightweight, all-day comfort.',
         'The low-cut silhouette adds a clean, streamlined look.',
         'Padded, low-cut collar feels soft and comfortable.'
     ],
-    -- Details for product modal
     ARRAY[
         'Foam midsole',
         'Perforations on toe'
     ],
-    -- Origin for shoe
     'Debuting in 1982, the AF1 was the first basketball shoe to house Nike Air, revolutionizing the game while rapidly gaining traction around the world. Today, the Air Force 1 stays true to its roots with the same soft and springy cushioning that changed sneaker history.',
-        --primary_review_comments
     ARRAY[
         'Great feature.',
         'Nike Airforce Trainers',
         'Smart'
     ],
-    --star_rating
     ARRAY[
         1.0,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,
         2.0,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,
@@ -1783,20 +1711,10 @@ INSERT INTO shoeData(
         4.0,4.1,4.2,4.3,4.4,4.5,4.6,4.7,4.8,4.9,
         5.0
     ],
-    --customer username
     ARRAY['Shido', 'Ian01', 'Nicola'],
-    --review dates
     ARRAY['Jan 13, 2024', 'Jan 07, 2024', 'Jan 07, 2024'],
-    --secondary review comments
     ARRAY['Good buy. ASOS has been delivering quality products', 'I bought this as a Christmas present. The quality is very good and the price was very competitive', 'Good fit. Ordered size 11. Went nice with cargos and jeans.']
 );
-
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* White on Black */
-
 INSERT INTO shoeData(
     name,
     type,
@@ -1821,7 +1739,6 @@ INSERT INTO shoeData(
     review_date,
     secondary_review_comment
 ) VALUES(
-    /* Details */
     'Nike Air Force 1 ''07',
     'Men''s Shoes',
     'White/Black',
@@ -1829,7 +1746,6 @@ INSERT INTO shoeData(
     'The radiance lives on in the Nike Air Force 1 ’07, the b-ball icon that puts a fresh spin on what you know best: crisp leather, bold colors and the perfect amount of flash to make you shine.',
     115,
     172,
-    /* Image Gallery ///////////////////////////////////////////////////////////////////////// */ 
     ARRAY[
         'https://static.nike.com/a/images/t_default/a42a5d53-2f99-4e78-a081-9d07a2d0774a/air-force-1-07-mens-shoes-jBrhbr.png',
         'https://static.nike.com/a/videos/so_3.82/2f8c2650-733c-4b0d-86f5-2626f4a36db4/air-force-1-07-mens-shoes-jBrhbr.jpg',
@@ -1856,7 +1772,6 @@ INSERT INTO shoeData(
         'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4eb3370f-c1ca-47d1-927f-49b4e1545dc9/air-force-1-07-mens-shoes-jBrhbr.png',
         'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2fce110e-7613-485a-8f17-9ea267f121e6/air-force-1-07-mens-shoes-jBrhbr.png'
     ],
-    /* Sizing /////////////////////////////////////////////////////////////////////////////// */
     ARRAY[
         '{"size": "M 6 / W 7.5", "inStock": false}'::JSONB,
         '{"size": "M 6.5 / W 8", "inStock": true}'::JSONB,
@@ -1879,7 +1794,6 @@ INSERT INTO shoeData(
         '{"size": "M 17 / W 18.5", "inStock": true}'::JSONB,
         '{"size": "M 18 / W 19.5", "inStock": true}'::JSONB
     ],
-    /* Carousels //////////////////////////////////////////////////////////////////////////// */
     ARRAY[
         '{
             "image": "https://static.pxlecdn.com/photos/584393865/original/7fed2411cf2668ec98b4.jpg",
@@ -2006,7 +1920,6 @@ INSERT INTO shoeData(
             ]
         }'::JSONB
     ],
-    -- Complete The Look
     ARRAY[
         '{
         "image": "https://i.postimg.cc/zf4h7JZ2/set1.png",
@@ -2339,40 +2252,33 @@ INSERT INTO shoeData(
             ]
             }'::JSONB
         ],
-    /* Explorer Images ///////////////////////////////////////////////////////////////////// */
     ARRAY[
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/edac202b-5742-47db-82a7-601b950abcfb/image.jpg',
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/e1b5af2b-2bf2-44ff-b696-11b49e4547e0/image.jpg',
         'https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/db7fba46-21e9-4167-a4e1-37d828a03a47/image.jpg'
     ],
-    -- Stores where shoes are available
     ARRAY[
         'Nike Factory Store - Paramus',
         'Nike Well Collective - Battery Park',
         'Nike Unite - East New York',
         'Nike Factory Store - Newark'
     ],
-    -- Benefits for products in the modal and explore section
     ARRAY[
         'Smoother than backboard glass and featuring a slight sheen, the stitched leather overlays add heritage style, durability and support.',
         'Originally designed for performance hoops, the Nike Air cushioning adds lightweight, all-day comfort.',
         'The low-cut silhouette adds a clean, streamlined look.',
         'Padded, low-cut collar feels soft and comfortable.'
     ],
-    -- Details for product modal
     ARRAY[
         'Foam midsole',
         'Perforations on toe'
     ],
-    -- Origin for shoe
     'Debuting in 1982, the AF1 was the first basketball shoe to house Nike Air, revolutionizing the game while rapidly gaining traction around the world. Today, the Air Force 1 stays true to its roots with the same soft and springy cushioning that changed sneaker history.',
-         --primary_review_comments
     ARRAY[
         'Great feature.',
         'Nike Airforce Trainers',
         'Smart'
     ],
-    --star_rating
     ARRAY[
         1.0,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,
         2.0,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,
@@ -2380,10 +2286,7 @@ INSERT INTO shoeData(
         4.0,4.1,4.2,4.3,4.4,4.5,4.6,4.7,4.8,4.9,
         5.0
     ],
-    --customer username
     ARRAY['Shido', 'Ian01', 'Nicola'],
-    --review dates
     ARRAY['Jan 13, 2024', 'Jan 07, 2024', 'Jan 07, 2024'],
-    --secondary review comments
     ARRAY['Good buy. ASOS has been delivering quality products', 'I bought this as a Christmas present. The quality is very good and the price was very competitive', 'Good fit. Ordered size 11. Went nice with cargos and jeans.']
 );
