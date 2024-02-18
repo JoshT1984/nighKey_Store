@@ -1,0 +1,39 @@
+#help_sublinks {
+  display: flex;
+  position: relative;
+  color: #5f5f5f;
+  transition-behavior: normal;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: all;
+  white-space: nowrap;
+  white-space-collapse: collapse;
+  text-decoration: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+#help_sublinks h1 {
+  color: white;
+  position: relative;
+  background-color: transparent;
+  margin-bottom: -0.4rem;
+  width: 1.5rem;
+  left: 7rem;
+  margin-bottom: 18px;
+  font-size: 13px;
+  letter-spacing: -1.15px;
+}
+#help_sublinks p {
+  text-align: left;
+  margin-left: 7.2rem;
+  display: flex;
+  font-size: 12px;
+  margin-top: -1.3rem;
+  width:7.5rem;
+}
+#help_sublinks p:hover {
+  color: white;
+  background-color: transparent;
+}
